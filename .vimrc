@@ -33,4 +33,9 @@ inoremap (<cr> (<cr>) <ESC>
 
 "set showmatch                " show matching brackets.
 
-" AUTOCOMPLETE HTMLS "
+"function! LoadTemplate(extension)
+"    silent! :execute '0r '. a:extension. '.tpl'
+"    silent! execute 'source '. a:extension.'.patterns.tpl'
+"endfunction
+"autocmd BufNewFile * silent! call LoadTemplate('%:e')
+autocmd BufNewFile * silent! 0r ~/projects/github/repo/dot-files/templates/%:e.tpl" AUTOCOMPLETE HTMLS "
