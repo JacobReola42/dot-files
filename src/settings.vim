@@ -1,12 +1,11 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Basics: "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use case insensitive search, except when using capital letters
 set autoindent          " copies current indent on newline
 "  uses same indent when textwidth is reached
 set smartindent         " indentations are based off FileType
+"" set autoindent smartindent " auto/smart indent.
 ""set backspace=indent,eol,start " Allow backspacing over ai, \n, I
 ""set encoding=utf8       " standard encoding and standard language
 set ignorecase          " ignores the case of normal letters
@@ -15,12 +14,14 @@ set smartcase           " identifies case specific patterns
 ""set nostartofline       " Off - cursor is kept in the same column
 set notimeout ttimeout ttimeoutlen=200 " Time out on keycodes, != mappings
 set mouse=a             " Enable use of the mouse for all modes. 'a' means all previous modes.
+" smarttab              " better backspace and tab
 set expandtab           " tabs are spaces
 set shiftround          " set indent to round to nearest shiftwidth
 set shiftwidth=4
 set softtabstop=4       " number of spaces in tab when editing
 set tabstop=4           " number of visual spaces per TAB
 set tw=79               " physical width of document
+"" set scrolloff=5      " show at least 5 lines above/below. 
 ""set wrap                " visual/virtual line wrapping
 
 " Console-Menu "
@@ -73,5 +74,9 @@ set showmatch           " highlight matching [{()}]
 set showmode            " show INSERT, VISUAL, etc
 set splitbelow splitright " Splits open at bottom and right
 set visualbell          " Use visual bell instead of beeping
+set errorbells          " turn off error bell. 
+set ruler               " show the number line and column on the bar.
+colorscheme desert      " enables colorcheme with syntax. 
+set bg=dark             " can set to dark/light depending on background. 
 syntax on               " Enable syntax highlighting
 syntax enable           " enable syntax processing      --Colors
